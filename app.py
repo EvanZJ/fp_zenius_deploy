@@ -240,4 +240,5 @@ def load_model():
     model = joblib.load('model.pkl')
     return model
 import xgboost as xgb
-model = load_model()
+model = xgb.Booster()
+model.load_model(load_model())
