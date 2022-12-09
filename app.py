@@ -213,6 +213,7 @@ type_dict = {
     'DAYS_REGISTRATION'        :     'float64',
     'DAYS_ID_PUBLISH'           :      'int64',
     'HOUR_APPR_PROCESS_START'     :    'int64',
+    'DAYS_LAST_PHONE_CHANGE'    :    'float64',
 }
 
 for i in val_col:
