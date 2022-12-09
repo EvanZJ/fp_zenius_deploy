@@ -3,7 +3,6 @@ from flask_bootstrap import Bootstrap5
 import numpy as np
 import joblib 
 import pandas as pd
-from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
 app = Flask(__name__)
