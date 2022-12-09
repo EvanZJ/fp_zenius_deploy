@@ -245,8 +245,10 @@ df_test = pd.DataFrame(temp_dict, columns=temp_dict.keys(), index=[0])
 st.write(temp_dict)
 
 def predict_credit(model, df_test):
-    pred = model.predict(df_test)
-    return pred
+    if model.predict(df_test)[0] == 0:
+        st.markdown('### Credit is not approved')
+    else:
+        st.markdown('### Credit is approved')
 
 if st.button('Predict'):
     predict_credit(model, df_test)
