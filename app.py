@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+import pickle
 import gdown
 
 st.markdown('# Predicting Customer Ability to Pay Credits')
@@ -234,11 +234,10 @@ for i in val_col:
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    url = 'https://drive.google.com/uc?id=1R9hel7MoJjW2U-9RpRSz1jHTQZO-_mnz'
+    url = 'https://drive.google.com/uc?id=1-HkXELzbwlZ9xR2wP7ePf5vrMkHR1hqg'
     output = 'model.pkl'
     gdown.download(url, output, quiet=True)
-    model = joblib.load('model.pkl')
+    model = pickle.load(open('model.pkl'), 'rb')
     return model
 import xgboost as xgb
-model = xgb.Booster()
-model.load_model(load_model())
+model = load_model()
