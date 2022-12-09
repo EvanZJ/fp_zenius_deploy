@@ -226,6 +226,7 @@ for i in val_col:
             else:
                 str_temp = str(i) + '_' + str(j)
                 temp_dict[str_temp] = 0
+        temp_dict.pop(i)
     else:
         if(type_dict[i] == 'int64'):
             temp_dict[i] = st.number_input(col_dict[i], value=0, step=1)
@@ -239,5 +240,4 @@ def load_model():
     gdown.download(url, output, quiet=True)
     model = pickle.load(open('model.pkl', 'rb'))
     return model
-import xgboost as xgb
 model = load_model()
