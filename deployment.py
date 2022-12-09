@@ -1,14 +1,16 @@
-import streamlit as st
-import pandas as pd
+from flask import Flask, render_template, request
+from flask_bootstrap import Bootstrap5
 import numpy as np
-import joblib
-import gdown
+import joblib 
+import pandas as pd
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
 
-@st.cache(allow_output_mutation=True)
-def load_model():
-    url = 'https://drive.google.com/uc?id=1n_CObRNFjYx360I6D5r0lcUFZiU5JkCG'
-    output = 'model.pkl'
-    gdown.download(url, output, quiet=True)
-    model = joblib.load('model.pkl')
-    return model
-model = load_model()
+app = Flask(__name__)
+bootstrap = Bootstrap5(app)
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
