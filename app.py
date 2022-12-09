@@ -230,9 +230,10 @@ for i in val_col:
     else:
         if(type_dict[i] == 'int64'):
             temp_dict[i] = st.number_input(col_dict[i], value=0, step=1)
+            if i == 'DAYS_BIRTH':
+                temp_dict[i] = temp_dict[i] * 365
         else:
             temp_dict[i] = st.number_input(col_dict[i], value=0.0, step=0.1)
-    temp_dict['DAYS_BIRTH'] = temp_dict['DAYS_BIRTH'] * 365
 
 @st.cache(allow_output_mutation=True)
 def load_model():
