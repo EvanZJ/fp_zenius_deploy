@@ -161,7 +161,7 @@ col_dict = {
     'AMT_CREDIT' : 'Credit Amount',
     'AMT_GOODS_PRICE' : 'Goods Price',
     'REGION_POPULATION_RELATIVE' : 'Region Population',
-    'DAYS_BIRTH' : 'Age in Days (Age times 365)',
+    'DAYS_BIRTH' : 'Age of Client',
     'DAYS_REGISTRATION' :  'How many days before the application did client change his registration?',
     'DAYS_ID_PUBLISH' : 'How many days before the application did client change the identity document with which he applied for the loan?',
     'HOUR_APPR_PROCESS_START' : 'Approximately at what hour did the client apply for the loan?',
@@ -232,6 +232,7 @@ for i in val_col:
             temp_dict[i] = st.number_input(col_dict[i], value=0, step=1)
         else:
             temp_dict[i] = st.number_input(col_dict[i], value=0.0, step=0.1)
+    temp_dict['DAYS_BIRTH'] = temp_dict['DAYS_BIRTH'] * 365
 
 @st.cache(allow_output_mutation=True)
 def load_model():
