@@ -237,7 +237,7 @@ def load_model():
     url = 'https://drive.google.com/uc?id=1-HkXELzbwlZ9xR2wP7ePf5vrMkHR1hqg'
     output = 'model.pkl'
     gdown.download(url, output, quiet=True)
-    model = pickle.load(open('model.pkl'), 'rb')
+    model = pickle.load(open('model.pkl', 'rb'))
     return model
 import xgboost as xgb
 model = load_model()
