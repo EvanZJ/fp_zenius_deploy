@@ -11,4 +11,3 @@ def load_model():
     gdown.download(url, output, quiet=True)
     model = joblib.load('model.pkl')
     return model
-model = load_model()
