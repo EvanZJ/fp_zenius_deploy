@@ -241,3 +241,12 @@ def load_model():
     model = pickle.load(open('model.pkl', 'rb'))
     return model
 model = load_model()
+df_test = pd.DataFrame(temp_dict, columns=temp_dict.keys(), index=[0])
+st.write(temp_dict)
+
+def predict_credit(model, df_test):
+    pred = model.predict(df_test)
+    return pred
+
+if st.button('Predict'):
+    predict_credit(model, df_test)
