@@ -239,4 +239,5 @@ def load_model():
     gdown.download(url, output, quiet=True)
     model = joblib.load('model.pkl')
     return model
+import xgboost as xgb
 model = load_model()
