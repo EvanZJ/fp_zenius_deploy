@@ -244,7 +244,7 @@ def load_model():
     return model
 model = load_model()
 df_test = pd.DataFrame(temp_dict, columns=temp_dict.keys(), index=[0])
-st.write(temp_dict)
+# st.write(temp_dict)
 
 def predict_credit(model, df_test):
     if model.predict(df_test)[0] == 0:
