@@ -131,7 +131,7 @@ uniq = {
     'FLAG_OWN_CAR' : ['Yes', 'No'],
     'NAME_INCOME_TYPE' : ['Working', 'State servant', 'Commercial associate', 'Pensioner', 'Unemployed',
                           'Student', 'Businessman', 'Maternity leave'],
-    'NAME_EDUCATION_TYPE' : ['Secondary / secondary special', 'Higher education', 'Incomplete higher'
+    'NAME_EDUCATION_TYPE' : ['Secondary / secondary special', 'Higher education', 'Incomplete higher',
                              'Lower secondary', 'Academic degree'],
     'NAME_FAMILY_STATUS' : ['Single / not married', 'Married', 'Civil marriage', 'Widow', 'Separated',
                             'Unknown'],
@@ -148,7 +148,7 @@ uniq = {
                             'Security Ministries', 'Transport: type 4', 'Industry: type 1', 'Emergency',
                             'Security', 'Trade: type 2', 'University', 'Transport: type 3', 'Police',
                             'Business Entity Type 1', 'Postal', 'Industry: type 4', 'Agriculture',
-                            'Restaurant' 'Culture', 'Hotel', 'Industry: type 7', 'Trade: type 3',
+                            'Restaurant', 'Culture', 'Hotel', 'Industry: type 7', 'Trade: type 3',
                             'Industry: type 3', 'Bank', 'Industry: type 9', 'Insurance', 'Trade: type 6',
                             'Industry: type 2', 'Transport: type 1', 'Industry: type 12', 'Mobile',
                             'Trade: type 1', 'Industry: type 5', 'Industry: type 10', 'Legal Services',
