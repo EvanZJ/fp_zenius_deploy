@@ -248,9 +248,9 @@ df_test = pd.DataFrame(temp_dict, columns=temp_dict.keys(), index=[0])
 
 def predict_credit(model, df_test):
     if model.predict(df_test)[0] == 0:
-        st.markdown('### Credit is not approved')
+        st.markdown('### Credit is Approved')
     else:
-        st.markdown('### Credit is approved')
+        st.markdown('### Credit is Rejected')
 
 if st.button('Predict'):
     predict_credit(model, df_test)
